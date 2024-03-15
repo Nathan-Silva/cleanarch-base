@@ -41,7 +41,6 @@ public class VehicleResource {
         return Response.ok(createdVehicle).build();
     }
 
-
     @PUT
     @Path("/{id}")
     public Response updateVehicle(@PathParam("id") Integer id, UpdateVehicleRequest updateVehicleRequest) {

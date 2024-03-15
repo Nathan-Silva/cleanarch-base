@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-server
+    networks:
+      - compose-bridge
+    environment:
+      POSTGRES_PASSWORD: "1234"
+      POSTGRES_USERNAME: "postgres"
+      POSTGRES_DB: "postgres"
+    ports:
+      - 5432:5432
+
+  cleaarch-base:
+    image: braganathan38/cleanarch-base-jvm
+    container_name: cleanarchebase-quarkus
+    networks:
+      - compose-bridge
+    environment:
+      POSTGRES_PASS: "1234"
+      POSTGRES_USER: "postgres"
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+
+networks:
+  compose-bridge:
+    driver: bridge
