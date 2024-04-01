@@ -4,83 +4,83 @@ import java.time.LocalDateTime;
 
 public class VehicleDTO {
 
-    private Integer id;
+    private Integer vehicleId;
 
-    private String nomeVeiculo;
+    private String vehicleName;
 
-    private String marcaVeiculo;
+    private String vehicleBrand;
 
-    private Integer anoVeiculo;
+    private Integer vehicleYear;
 
-    private String descricaoVeiculo;
+    private String vehicleDescription;
 
-    private Boolean veiculoVendido;
+    private Boolean vehicleSaled;
 
-    private LocalDateTime created;
+    private LocalDateTime vehicleCreated;
 
-    private LocalDateTime updated;
+    private LocalDateTime vehicleUpdated;
 
-    public Integer getId() {
-        return id;
+    public Integer getVehicleId() {
+        return vehicleId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setVehicleId(Integer vehicleId) {
+        this.vehicleId = vehicleId;
     }
 
-    public String getNomeVeiculo() {
-        return nomeVeiculo;
+    public String getVehicleName() {
+        return vehicleName;
     }
 
-    public void setNomeVeiculo(String nomeVeiculo) {
-        this.nomeVeiculo = nomeVeiculo;
+    public void setVehicleName(String vehicleName) {
+        this.vehicleName = vehicleName;
     }
 
-    public String getMarcaVeiculo() {
-        return marcaVeiculo;
+    public String getVehicleBrand() {
+        return vehicleBrand;
     }
 
-    public void setMarcaVeiculo(String marcaVeiculo) {
-        this.marcaVeiculo = marcaVeiculo;
+    public void setVehicleBrand(String vehicleBrand) {
+        this.vehicleBrand = vehicleBrand;
     }
 
-    public Integer getAnoVeiculo() {
-        return anoVeiculo;
+    public Integer getVehicleYear() {
+        return vehicleYear;
     }
 
-    public void setAnoVeiculo(Integer anoVeiculo) {
-        this.anoVeiculo = anoVeiculo;
+    public void setVehicleYear(Integer vehicleYear) {
+        this.vehicleYear = vehicleYear;
     }
 
-    public String getDescricaoVeiculo() {
-        return descricaoVeiculo;
+    public String getVehicleDescription() {
+        return vehicleDescription;
     }
 
-    public void setDescricaoVeiculo(String descricaoVeiculo) {
-        this.descricaoVeiculo = descricaoVeiculo;
+    public void setVehicleDescription(String vehicleDescription) {
+        this.vehicleDescription = vehicleDescription;
     }
 
-    public Boolean getVeiculoVendido() {
-        return veiculoVendido;
+    public Boolean getVehicleSaled() {
+        return vehicleSaled;
     }
 
-    public void setVeiculoVendido(Boolean veiculoVendido) {
-        this.veiculoVendido = veiculoVendido;
+    public void setVehicleSaled(Boolean vehicleSaled) {
+        this.vehicleSaled = vehicleSaled;
     }
 
-    public LocalDateTime getCreated() {
-        return created;
+    public LocalDateTime getVehicleCreated() {
+        return vehicleCreated;
     }
 
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
+    public void setVehicleCreated(LocalDateTime vehicleCreated) {
+        this.vehicleCreated = vehicleCreated;
     }
 
-    public LocalDateTime getUpdated() {
-        return updated;
+    public LocalDateTime getVehicleUpdated() {
+        return vehicleUpdated;
     }
 
-    public void setUpdated(LocalDateTime updated) {
-        this.updated = updated;
+    public void setVehicleUpdated(LocalDateTime vehicleUpdated) {
+        this.vehicleUpdated = vehicleUpdated;
     }
 }

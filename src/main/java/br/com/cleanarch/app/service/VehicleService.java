@@ -7,6 +7,7 @@ import br.com.cleanarch.app.request.UpdateVehicleRequest;
 import br.com.cleanarch.domain.dto.VehicleDTO;
 import br.com.cleanarch.domain.repositories.IVehicleRepository;
 import br.com.cleanarch.domain.usecase.CreateVehicleUseCase;
+import br.com.cleanarch.domain.usecase.DeleteVehicleUseCase;
 import br.com.cleanarch.domain.usecase.QueriesVehicleUseCase;
 import br.com.cleanarch.domain.usecase.UpdateVehicleUseCase;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -16,7 +17,6 @@ import java.util.List;
 
 @ApplicationScoped
 public class VehicleService extends AbstractService {
-
 
     @Default
     IVehicleRepository vehicleRepository;
@@ -45,6 +45,11 @@ public class VehicleService extends AbstractService {
     public VehicleDTO update(Integer id, UpdateVehicleRequest updateVehicleRequest) {
         var updatedVehicle = new UpdateVehicleUseCase(vehicleRepository);
         return updatedVehicle.update(id, VehicleAppMapper.toDto(updateVehicleRequest));
+    }
+
+    public void delete(Integer id){
+        var deleteVehicle = new DeleteVehicleUseCase(vehicleRepository);
+        deleteVehicle.deleteById(id);
     }
 
 }

@@ -10,91 +10,92 @@ import java.time.LocalDateTime;
 public class VehicleModel extends PanacheEntityBase {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "vehicle_seq")
+    @SequenceGenerator(name = "vehicle_seq", sequenceName = "vehicle_seq")
+    private Integer vehicleId;
 
-    @Column(name = "NOME_VEICULO")
-    public String nomeVeiculo;
+    @Column(name = "vehicle_name")
+    public String vehicleName;
 
-    @Column(name = "MARCA_VEICULO")
-    public String marcaVeiculo;
+    @Column(name = "vehicle_brand")
+    public String vehicleBrand;
 
-    @Column(name = "ANO_VEICULO")
-    public Integer anoVeiculo;
+    @Column(name = "vehicle_year")
+    public Integer vehicleYear;
 
-    @Column(name = "DESCRICAO_VEICULO")
-    public String descricaoVeiculo;
+    @Column(name = "vehicle_description")
+    public String vehicleDescription;
 
-    @Column(name = "VEICULO_VENDIDO")
-    public Boolean veiculoVendido;
+    @Column(name = "vehicle_saled")
+    public Boolean vehicleSaled;
 
-    @Column(name = "created")
-    public LocalDateTime created;
+    @Column(name = "vehicle_created")
+    public LocalDateTime vehicleCreated;
 
-    @Column(name = "updated")
-    public LocalDateTime updated;
+    @Column(name = "vehicle_updated")
+    public LocalDateTime vehicleUpdated;
 
-    public Integer getIdVeiculo() {
-        return id;
+    public Integer getVehicleId() {
+        return vehicleId;
     }
 
-    public void setIdVeiculo(Integer idVeiculo) {
-        this.id = idVeiculo;
+    public void setVehicleId(Integer vehicleId) {
+        this.vehicleId = vehicleId;
     }
 
-    public String getNomeVeiculo() {
-        return nomeVeiculo;
+    public String getVehicleName() {
+        return vehicleName;
     }
 
-    public void setNomeVeiculo(String nomeVeiculo) {
-        this.nomeVeiculo = nomeVeiculo;
+    public void setVehicleName(String vehicleName) {
+        this.vehicleName = vehicleName;
     }
 
-    public String getMarcaVeiculo() {
-        return marcaVeiculo;
+    public String getVehicleBrand() {
+        return vehicleBrand;
     }
 
-    public void setMarcaVeiculo(String marcaVeiculo) {
-        this.marcaVeiculo = marcaVeiculo;
+    public void setVehicleBrand(String vehicleBrand) {
+        this.vehicleBrand = vehicleBrand;
     }
 
-    public Integer getAnoVeiculo() {
-        return anoVeiculo;
+    public Integer getVehicleYear() {
+        return vehicleYear;
     }
 
-    public void setAnoVeiculo(Integer anoVeiculo) {
-        this.anoVeiculo = anoVeiculo;
+    public void setVehicleYear(Integer vehicleYear) {
+        this.vehicleYear = vehicleYear;
     }
 
-    public String getDescricaoVeiculo() {
-        return descricaoVeiculo;
+    public String getVehicleDescription() {
+        return vehicleDescription;
     }
 
-    public void setDescricaoVeiculo(String descricaoVeiculo) {
-        this.descricaoVeiculo = descricaoVeiculo;
+    public void setVehicleDescription(String vehicleDescription) {
+        this.vehicleDescription = vehicleDescription;
     }
 
-    public Boolean getVeiculoVendido() {
-        return veiculoVendido;
+    public Boolean getVehicleSaled() {
+        return vehicleSaled;
     }
 
-    public void setVeiculoVendido(Boolean veiculoVendido) {
-        this.veiculoVendido = veiculoVendido;
+    public void setVehicleSaled(Boolean vehicleSaled) {
+        this.vehicleSaled = vehicleSaled;
     }
 
-    public LocalDateTime getCreated() {
-        return created;
+    public LocalDateTime getVehicleCreated() {
+        return vehicleCreated;
     }
 
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
+    public void setVehicleCreated(LocalDateTime vehicleCreated) {
+        this.vehicleCreated = vehicleCreated;
     }
 
-    public LocalDateTime getUpdated() {
-        return updated;
+    public LocalDateTime getVehicleUpdated() {
+        return vehicleUpdated;
     }
 
-    public void setUpdated(LocalDateTime updated) {
-        this.updated = updated;
+    public void setVehicleUpdated(LocalDateTime vehicleUpdated) {
+        this.vehicleUpdated = vehicleUpdated;
     }
 }

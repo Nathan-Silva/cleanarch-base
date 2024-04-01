@@ -10,14 +10,14 @@ public class VehicleMapper {
     public static VehicleDTO toDto(VehicleEntity vehicleEntity) {
         var dto = new VehicleDTO();
 
-        dto.setId(vehicleEntity.getId());
-        dto.setNomeVeiculo(vehicleEntity.getNomeVeiculo());
-        dto.setAnoVeiculo(vehicleEntity.getAnoVeiculo());
-        dto.setMarcaVeiculo(vehicleEntity.getMarcaVeiculo());
-        dto.setDescricaoVeiculo(vehicleEntity.getDescricaoVeiculo());
-        dto.setVeiculoVendido(vehicleEntity.getVeiculoVendido());
-        dto.setCreated(vehicleEntity.getCreated());
-        dto.setUpdated(vehicleEntity.getUpdated());
+        dto.setVehicleId(vehicleEntity.getVehicleId());
+        dto.setVehicleName(vehicleEntity.getVehicleName());
+        dto.setVehicleYear(vehicleEntity.getVehicleYear());
+        dto.setVehicleBrand(vehicleEntity.getVehicleBrand());
+        dto.setVehicleDescription(vehicleEntity.getVehicleDescription());
+        dto.setVehicleSaled(vehicleEntity.getVehicleSaled());
+        dto.setVehicleCreated(vehicleEntity.getVehicleCreated());
+        dto.setVehicleUpdated(vehicleEntity.getVehicleUpdated());
 
         return dto;
     }
@@ -25,14 +25,14 @@ public class VehicleMapper {
     public static VehicleEntity toEntity(VehicleDTO vehicleModel) {
         return new VehicleEntity(
 
-                vehicleModel.getId(),
-                vehicleModel.getNomeVeiculo(),
-                vehicleModel.getMarcaVeiculo(),
-                vehicleModel.getAnoVeiculo(),
-                vehicleModel.getDescricaoVeiculo(),
-                vehicleModel.getVeiculoVendido(),
-                vehicleModel.getCreated(),
-                vehicleModel.getUpdated()
+                vehicleModel.getVehicleId(),
+                vehicleModel.getVehicleName(),
+                vehicleModel.getVehicleBrand(),
+                vehicleModel.getVehicleYear(),
+                vehicleModel.getVehicleDescription(),
+                vehicleModel.getVehicleSaled(),
+                vehicleModel.getVehicleCreated(),
+                vehicleModel.getVehicleUpdated()
         );
     }
 }

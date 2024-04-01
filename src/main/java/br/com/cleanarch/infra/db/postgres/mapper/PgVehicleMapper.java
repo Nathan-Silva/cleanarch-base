@@ -8,14 +8,14 @@ public class PgVehicleMapper {
 
     public static VehicleEntity toEntity(VehicleModel vehicleModel) {
         var entity = new VehicleEntity(
-                vehicleModel.getIdVeiculo(),
-                vehicleModel.getNomeVeiculo(),
-                vehicleModel.getMarcaVeiculo(),
-                vehicleModel.getAnoVeiculo(),
-                vehicleModel.getDescricaoVeiculo(),
-                vehicleModel.getVeiculoVendido(),
-                vehicleModel.getCreated(),
-                vehicleModel.getUpdated()
+                vehicleModel.getVehicleId(),
+                vehicleModel.getVehicleName(),
+                vehicleModel.getVehicleBrand(),
+                vehicleModel.getVehicleYear(),
+                vehicleModel.getVehicleDescription(),
+                vehicleModel.getVehicleSaled(),
+                vehicleModel.getVehicleCreated(),
+                vehicleModel.getVehicleUpdated()
         );
 
         return entity;
@@ -24,14 +24,14 @@ public class PgVehicleMapper {
     public static VehicleModel toModel(VehicleEntity vehicleEntity) {
         var vehicleModel = new VehicleModel();
 
-        vehicleModel.setIdVeiculo(vehicleEntity.getId());
-        vehicleModel.setNomeVeiculo(vehicleEntity.getNomeVeiculo());
-        vehicleModel.setMarcaVeiculo(vehicleEntity.getMarcaVeiculo());
-        vehicleModel.setAnoVeiculo(vehicleEntity.getAnoVeiculo());
-        vehicleModel.setDescricaoVeiculo(vehicleEntity.getDescricaoVeiculo());
-        vehicleModel.setVeiculoVendido(vehicleEntity.getVeiculoVendido());
-        vehicleModel.setCreated(vehicleEntity.getCreated());
-        vehicleModel.setUpdated(vehicleEntity.getUpdated());
+        vehicleModel.setVehicleId(vehicleEntity.getVehicleId());
+        vehicleModel.setVehicleName(vehicleEntity.getVehicleName());
+        vehicleModel.setVehicleBrand(vehicleEntity.getVehicleBrand());
+        vehicleModel.setVehicleYear(vehicleEntity.getVehicleYear());
+        vehicleModel.setVehicleDescription(vehicleEntity.getVehicleDescription());
+        vehicleModel.setVehicleSaled(vehicleEntity.getVehicleSaled());
+        vehicleModel.setVehicleCreated(vehicleEntity.getVehicleCreated());
+        vehicleModel.setVehicleUpdated(vehicleEntity.getVehicleUpdated());
 
         return vehicleModel;
     }

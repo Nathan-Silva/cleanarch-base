@@ -10,11 +10,11 @@ public class VehicleAppMapper {
     public static VehicleDTO toDto(CreateVehicleRequest createVehicleRequest) {
         var dto = new VehicleDTO();
 
-        dto.setNomeVeiculo(createVehicleRequest.getNomeVeiculo());
-        dto.setAnoVeiculo(createVehicleRequest.getAnoVeiculo());
-        dto.setMarcaVeiculo(createVehicleRequest.getMarcaVeiculo());
-        dto.setDescricaoVeiculo(createVehicleRequest.getDescricaoVeiculo());
-        dto.setVeiculoVendido(createVehicleRequest.getVeiculoVendido());
+        dto.setVehicleName(createVehicleRequest.getVehicleName());
+        dto.setVehicleYear(createVehicleRequest.getVehicleYear());
+        dto.setVehicleBrand(createVehicleRequest.getVehicleBrand());
+        dto.setVehicleDescription(createVehicleRequest.getVehicleDescription());
+        dto.setVehicleSaled(createVehicleRequest.getVehicleSaled());
 
         return dto;
     }
@@ -22,11 +22,11 @@ public class VehicleAppMapper {
     public static VehicleDTO toDto(UpdateVehicleRequest updateVehicleRequest) {
         var dto = new VehicleDTO();
 
-        dto.setNomeVeiculo(updateVehicleRequest.getNomeVeiculo());
-        dto.setAnoVeiculo(updateVehicleRequest.getAnoVeiculo());
-        dto.setMarcaVeiculo(updateVehicleRequest.getMarcaVeiculo());
-        dto.setDescricaoVeiculo(updateVehicleRequest.getDescricaoVeiculo());
-        dto.setVeiculoVendido(updateVehicleRequest.getVeiculoVendido());
+        dto.setVehicleName(updateVehicleRequest.getVehicleName());
+        dto.setVehicleYear(updateVehicleRequest.getVehicleYear());
+        dto.setVehicleBrand(updateVehicleRequest.getVehicleBrand());
+        dto.setVehicleDescription(updateVehicleRequest.getVehicleDescription());
+        dto.setVehicleSaled(updateVehicleRequest.getVehicleSaled());
 
         return dto;
     }

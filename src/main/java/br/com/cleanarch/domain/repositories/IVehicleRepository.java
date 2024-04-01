@@ -18,5 +18,5 @@ public interface IVehicleRepository {
 
     VehicleEntity updatePatch(VehicleEntity vehicleEntity);
 
-
+    void delete(Integer id);
 }

@@ -17,7 +17,7 @@ public class CreateVehicleUseCase {
 
     public VehicleDTO create(VehicleDTO vehicleDTO){
 
-        vehicleDTO.setCreated(LocalDateTime.now());
+        vehicleDTO.setVehicleCreated(LocalDateTime.now());
 
         var vehicleEntity = VehicleMapper.toEntity(vehicleDTO);
         vehicleEntity = vehicleRepository.create(vehicleEntity);

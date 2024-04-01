@@ -37,7 +37,6 @@ public class VehicleRepository implements IVehicleRepository {
     @Override
     @Transactional
     public VehicleEntity updatePut(VehicleEntity vehicleEntity) {
-
         var vehicleModel = PgVehicleMapper.toModel(vehicleEntity);
         VehicleModel.getEntityManager().merge(vehicleModel);
 
@@ -48,5 +47,11 @@ public class VehicleRepository implements IVehicleRepository {
     @Transactional
     public VehicleEntity updatePatch(VehicleEntity vehicleEntity) {
         return null;
+    }
+
+    @Override
+    @Transactional
+    public void delete(Integer id) {
+        VehicleModel.deleteById(id);
     }
 }
