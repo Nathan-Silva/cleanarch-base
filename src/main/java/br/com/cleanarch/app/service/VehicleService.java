@@ -31,11 +31,6 @@ public class VehicleService extends AbstractService {
         return queryUseCase.findVehicleById(id);
     }
 
-    public VehicleDTO findVehicleByParameters(Integer id) {
-        var queryUseCase = new QueriesVehicleUseCase(vehicleRepository);
-        return queryUseCase.findVehicleById(id);
-    }
-
     public VehicleDTO create(CreateVehicleRequest createVehicleRequest) {
         var createdVehicle = new CreateVehicleUseCase(vehicleRepository);
 

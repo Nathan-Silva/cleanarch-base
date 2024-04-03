@@ -30,10 +30,6 @@ public class QueriesVehicleUseCase {
 
     public VehicleDTO findVehicleById(Integer id){
         var vehicle = vehicleRepository.findVehicleById(id);
-
-        if(vehicle.getVehicleName().isEmpty())
-            throw new BusinessException("01", "Database is empty");
-
         return VehicleMapper.toDto(vehicle);
     }
 }
